@@ -33,7 +33,7 @@
 
 .ill{
 	transform-origin: 50% 100%;
-	@include pos-scale(-150, -250, 0.5);
+	@include pos-scale(0, 0, 1);
 }
 
 #legalBtn{	

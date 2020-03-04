@@ -16,9 +16,10 @@ function start() {
 
 	var tl_player = new TimelineMax();
 	var actionY = "+=250";
-	tl_player.from(".player_left", 1.3, { y: actionY, ease: Power3.easeOut }, .15);
-	tl_player.from(".player_right", 1.3, { y: actionY, ease: Power3.easeOut }, .1);
-	tl_player.from(".ball", 1.3, { y: actionY, ease: Power3.easeOut }, 0);
+	var jump = 1;
+	tl_player.from(".player_left", jump, { y: actionY, ease: Power3.easeOut }, .15);
+	tl_player.from(".player_right", jump, { y: actionY, ease: Power3.easeOut }, .1);
+	tl_player.from(".ball", jump, { y: actionY, ease: Power3.easeOut }, 0);
 
 	tl.add(tl_braclet, "+=.8");
 	tl.add(tl_player, "-=.7");
