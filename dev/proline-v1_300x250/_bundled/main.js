@@ -7,7 +7,7 @@ function start() {
 	tl.set(".frame1", { opacity: 1 });
 
 	tl.from(".ta_1", .01, { opacity: 0 }, "+=.2");
-	tl.from(".ta_2", .01, { opacity: 0 }, "+=.3");
+	tl.from(".ta_2", .01, { opacity: 0 }, "+=.8");
 
 	var tl_braclet = new TimelineMax();
 	tl_braclet.add("start");
@@ -21,7 +21,7 @@ function start() {
 	tl_player.from(".player_right", jump, { y: actionY, ease: Power3.easeOut }, .1);
 	tl_player.from(".ball", jump, { y: actionY, ease: Power3.easeOut }, 0);
 
-	tl.add(tl_braclet, "+=.8");
+	tl.add(tl_braclet, "+=1");
 	tl.add(tl_player, "-=.7");
 
 	tl.to(".frame1", .3, { opacity: 0 }, "+=1");

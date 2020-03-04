@@ -5,7 +5,7 @@ function start(){
 
 
 	tl.from(".ta_1", .01, {opacity:0}, "+=.2")
-	tl.from(".ta_2", .01, {opacity:0}, "+=.3")
+	tl.from(".ta_2", .01, {opacity:0}, "+=.8")
 
 	
 
@@ -25,7 +25,7 @@ function start(){
 	tl_player.from(".ball", jump, {y:actionY, ease:Power3.easeOut}, 0)
 
 
-	tl.add(tl_braclet, "+=.8")
+	tl.add(tl_braclet, "+=1")
 	tl.add(tl_player, "-=.7")
 
 
