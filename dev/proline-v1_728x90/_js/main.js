@@ -4,15 +4,15 @@ function start(){
 	tl.set(".frame1", {opacity:1})
 
 
-	tl.from(".ta_1", .01, {opacity:0}, "+=.1")
+	tl.from(".ta_1", .01, {opacity:0}, "+=.7")
 	tl.from(".ta_2", .01, {opacity:0}, "+=.5")
 
 	
 
 	const tl_braclet = new TimelineMax()
 	tl_braclet.add("start")
-	tl_braclet.from(".bracket_1", 1.1, {clip:`rect(0px 410px 160px 420px)`}, "start")
-	tl_braclet.from(".bracket_2", 1.1, {clip:`rect(0px 440px 160px 290px)`}, "start")
+	tl_braclet.from(".bracket_1", .6, {clip:`rect(0px 300px 90px 290px)`}, "start")
+	tl_braclet.from(".bracket_2", .6, {clip:`rect(0px 480px 90px 480px)`}, "start")
 
 	
 

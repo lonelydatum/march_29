@@ -4,7 +4,7 @@
 
 
 
-.frame2 {
+.frame1 {
 	// opacity: 1;
 }
 
@@ -18,17 +18,18 @@
 }
 
 .bracket {
-	@include pos-scale(0, 0, .5);
+	@include pos-scale(0, 0, 1);
 }
 
 .bracket.bracket_1 {
-	clip: rect(0px 410px 160px 290px);
-	// clip: rect(0px 410px 160px 420px);
+	clip: rect(0px 300px 90px 200px);
+	// clip: rect(0px 300px 90px 290px);
+	
 }
 
 .bracket.bracket_2 {
-	clip: rect(0px 560px 160px 290px);
-	// clip: rect(0px 440px 160px 290px);
+	clip: rect(0px 580px 90px 480px);
+	// clip: rect(0px 480px 90px 480px);
 }
 
 .ill{
