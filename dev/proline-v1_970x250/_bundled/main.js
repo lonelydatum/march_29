@@ -11,7 +11,7 @@ function start() {
 
 	var tl_braclet = new TimelineMax();
 	tl_braclet.add("start");
-	tl_braclet.from(".bracket_1", .7, { ease: Power1.easeOut, clip: "rect(0px 300px 90px 290px)" }, "start");
+	tl_braclet.from(".bracket_1", .7, { ease: Power1.easeOut, clip: "rect(0px 490px 250px 490px)" }, "start");
 	tl_braclet.from(".bracket_2", .7, { ease: Power1.easeOut, clip: "rect(0px 790px 250px 800px)" }, "start");
 
 	var tl_player = new TimelineMax();
