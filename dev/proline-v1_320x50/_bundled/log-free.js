@@ -7,32 +7,31 @@ function start() {
 	tl.set(".frame1", { opacity: 1 });
 
 	tl.from(".ta_1", .01, { opacity: 0 }, "+=.2");
-	tl.from(".ta_2", .01, { opacity: 0 }, "+=.8");
+	tl.from(".ta_2", .01, { opacity: 0 }, "+=.5");
 
 	var tl_braclet = new TimelineMax();
 	tl_braclet.add("start");
-	tl_braclet.from(".bracket_1", 1.1, { clip: "rect(0px 410px 160px 420px)" }, "start");
-	tl_braclet.from(".bracket_2", 1.1, { clip: "rect(0px 440px 160px 290px)" }, "start");
+	tl_braclet.from(".bracket_1", .7, { ease: Power1.easeOut, clip: "rect(0px 140px 50px 130px)" }, "start");
+	tl_braclet.from(".bracket_2", .7, { ease: Power1.easeOut, clip: "rect(0px 210px 50px 200px)" }, "start");
 
 	var tl_player = new TimelineMax();
 	var actionY = "+=250";
-	var jump = 1;
-	tl_player.from(".player_left", jump, { x: "-=40", y: actionY, ease: Power3.easeOut }, .15);
-	tl_player.from(".player_right", jump, { x: "+=40", y: actionY, ease: Power3.easeOut }, .1);
-	tl_player.from(".ball", jump, { y: actionY, ease: Power3.easeOut }, 0);
+	var jump = 4;
+	tl_player.from(".player_left", jump, { x: -10, y: 3, scale: .5, ease: Power3.easeOut }, 0);
+	tl_player.from(".player_right", jump, { x: 20, y: 4, scale: .5, ease: Power3.easeOut }, 0);
 
-	tl.add(tl_braclet, "+=1");
-	tl.add(tl_player, "-=.7");
+	// tl.add(tl_braclet, "+=1")
+	// tl.add(tl_player, 0)
 
-	tl.to(".frame1", .3, { opacity: 0 }, "+=1");
+	tl.to(".frame1", .3, { opacity: 0 }, 3);
 
 	tl.add(".f2");
 	tl.set(".frame2", { opacity: 1 });
 	tl.from(".phone", .5, { y: "+=100" });
 	tl.from(".ill", .4, { scale: 0 }, "-=.2");
 
-	tl.from(".tb", .01, { opacity: 0 }, "+=.2");
-	tl.from(".cta", .01, { opacity: 0 }, "+=.4");
+	// tl.from(".tb", .01, {opacity:0}, "+=.2")
+	tl.from(".cta", .01, { opacity: 0 }, "+=.5");
 
 	// tl.gotoAndPlay(".f2")
 }
