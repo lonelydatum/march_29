@@ -6,13 +6,13 @@ function start() {
 	var tl = new TimelineMax();
 	tl.set(".frame1", { opacity: 1 });
 
-	tl.from(".ta_1", .01, { opacity: 0 }, "+=.7");
+	tl.from(".ta_1", .01, { opacity: 0 }, "+=.2");
 	tl.from(".ta_2", .01, { opacity: 0 }, "+=.5");
 
 	var tl_braclet = new TimelineMax();
 	tl_braclet.add("start");
-	tl_braclet.from(".bracket_1", .6, { clip: "rect(0px 300px 90px 290px)" }, "start");
-	tl_braclet.from(".bracket_2", .6, { clip: "rect(0px 480px 90px 480px)" }, "start");
+	tl_braclet.from(".bracket_1", .7, { ease: Power1.easeOut, clip: "rect(0px 300px 90px 290px)" }, "start");
+	tl_braclet.from(".bracket_2", .7, { ease: Power1.easeOut, clip: "rect(0px 480px 90px 480px)" }, "start");
 
 	var tl_player = new TimelineMax();
 	var actionY = "+=250";
