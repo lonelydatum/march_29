@@ -25,7 +25,7 @@ function start(){
 	tl_player.from(".ball", jump, {y:actionY, ease:Power3.easeOut}, 0)
 
 
-	tl.add(tl_braclet, "+=1")
+	tl.add(tl_braclet, "+=.2")
 	tl.add(tl_player, "-=.7")
 
 

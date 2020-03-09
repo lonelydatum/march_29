@@ -21,7 +21,7 @@ function start() {
 	tl_player.from(".player_right", jump, { x: "+=40", y: actionY, ease: Power3.easeOut }, .1);
 	tl_player.from(".ball", jump, { y: actionY, ease: Power3.easeOut }, 0);
 
-	tl.add(tl_braclet, "+=1");
+	tl.add(tl_braclet, "+=.2");
 	tl.add(tl_player, "-=.7");
 
 	tl.to(".frame1", .3, { opacity: 0 }, "+=1");
