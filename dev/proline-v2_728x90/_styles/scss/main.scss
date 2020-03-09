@@ -1,0 +1,54 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1 {
+	// opacity: 1;
+}
+
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 728px;
+	height: 90px;
+}
+
+.bracket {
+	@include pos-scale(0, 0, 1);
+}
+
+.bracket.bracket_1 {
+	clip: rect(0px 300px 90px 200px);
+	// clip: rect(0px 300px 90px 290px);
+	
+}
+
+.bracket.bracket_2 {
+	clip: rect(0px 580px 90px 480px);
+	// clip: rect(0px 480px 90px 480px);
+}
+
+.ill{
+	transform-origin: 175px 90px;
+	@include pos-scale(0, 0, 1);
+}
+
+#legalBtn{	
+	@include pos(7, 50);
+	// opacity: 1;
+}
+
+
+.player_right{
+	@include pos-scale(107, -6,.5);
+	// @include pos-scale(139, 5,.45);
+}
+
+.player_left{
+	@include pos-scale(56, -10,.5);
+	// @include pos-scale(-14, -4,0.6);
+}
