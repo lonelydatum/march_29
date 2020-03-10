@@ -6,13 +6,10 @@ function start() {
 	var tl = new TimelineMax();
 	tl.set(".frame1", { opacity: 1 });
 
-	tl.from(".ta_1", .01, { opacity: 0 }, "+=.2");
-	tl.from(".ta_2", .01, { opacity: 0 }, "+=.5");
-
 	var tl_braclet = new TimelineMax();
 	tl_braclet.add("start");
-	tl_braclet.from(".bracket_1", 1.1, { clip: "rect(0px 410px 160px 420px)" }, "start");
-	tl_braclet.from(".bracket_2", 1.1, { clip: "rect(0px 440px 160px 290px)" }, "start");
+	tl_braclet.from(".bracket_1", .7, { clip: "rect(0px 410px 160px 420px)" }, "start");
+	tl_braclet.from(".bracket_2", .7, { clip: "rect(0px 440px 160px 290px)" }, "start");
 
 	var tl_player = new TimelineMax();
 	var actionY = "+=250";
@@ -21,8 +18,18 @@ function start() {
 	tl_player.from(".player_right", jump, { x: "+=40", y: actionY, ease: Power3.easeOut }, .1);
 	tl_player.from(".ball", jump, { y: actionY, ease: Power3.easeOut }, 0);
 
-	tl.add(tl_braclet, "+=.2");
-	tl.add(tl_player, "-=.7");
+	tl.add(tl_braclet, 0);
+	tl.add(tl_player, "-=.5");
+
+	tl.add('ta', "-=.3");
+	tl.from(".ta_1", .1, { opacity: 0, scale: .6, ease: Power3.easeInOut }, "ta");
+	tl.from(".ta_2", .01, { opacity: 0 }, "+=.3");
+
+	var tl_braclet_shake = new TimelineMax({ repeat: 4, yoyo: true });
+	tl_braclet_shake.add("start");
+	tl_braclet_shake.from(".bracket_1", .04, { x: "+=4", y: "+=2" }, "start");
+	tl_braclet_shake.from(".bracket_2", .04, { x: "-=2", y: "-=4" }, "start");
+	tl.add(tl_braclet_shake, "ta+=.1");
 
 	tl.to(".frame1", .3, { opacity: 0 }, "+=1");
 
