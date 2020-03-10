@@ -45,7 +45,7 @@ function start(){
 	
 
 	tl.add(tl_braclet_shake, "ta+=.7")
-	tl.add(tl_braclet_fall)
+	tl.add(tl_braclet_fall, "+=.2")
 
 	
 	tl.to(".frame1", .3, {opacity:0}, "+=1")

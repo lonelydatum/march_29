@@ -36,7 +36,7 @@ function start() {
 	tl_braclet_fall.to(".bracket_2", .3, { rotation: "+=11", y: "+=260" }, "start");
 
 	tl.add(tl_braclet_shake, "ta+=.7");
-	tl.add(tl_braclet_fall);
+	tl.add(tl_braclet_fall, "+=.2");
 
 	tl.to(".frame1", .3, { opacity: 0 }, "+=1");
 
