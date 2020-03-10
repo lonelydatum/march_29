@@ -25,11 +25,18 @@ function start() {
 	tl.from(".ta_1", .1, { opacity: 0, ease: Power3.easeInOut }, "ta");
 	tl.from(".ta_2", .1, { opacity: 0, scale: .6 }, "+=.3");
 
-	var tl_braclet_shake = new TimelineMax({ repeat: 4, yoyo: true });
+	var tl_braclet_shake = new TimelineMax({ repeat: 2, yoyo: true });
 	tl_braclet_shake.add("start");
 	tl_braclet_shake.from(".bracket_1", .04, { x: "+=4", y: "+=2" }, "start");
 	tl_braclet_shake.from(".bracket_2", .04, { x: "-=2", y: "-=4" }, "start");
+
+	var tl_braclet_fall = new TimelineMax();
+	tl_braclet_fall.add("start");
+	tl_braclet_fall.to(".bracket_1", .4, { rotation: "+=11", y: "+=260" }, "start");
+	tl_braclet_fall.to(".bracket_2", .3, { rotation: "+=11", y: "+=260" }, "start");
+
 	tl.add(tl_braclet_shake, "ta+=.7");
+	tl.add(tl_braclet_fall);
 
 	tl.to(".frame1", .3, { opacity: 0 }, "+=1");
 
